@@ -1,0 +1,266 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://dbtoolkit.gd" type="Script" id=1]
+[ext_resource path="res://DarkTheme/Dark.theme" type="Theme" id=2]
+[ext_resource path="res://courer prime.tres" type="DynamicFont" id=3]
+
+[node name="dbtoolkit" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="main" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="margin" type="MarginContainer" parent="main"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fields" type="VBoxContainer" parent="main/margin"]
+margin_right = 1004.0
+margin_bottom = 580.0
+
+[node name="dbsplit" type="HSplitContainer" parent="main/margin/fields"]
+margin_right = 1004.0
+margin_bottom = 25.0
+dragger_visibility = 1
+
+[node name="label" type="Label" parent="main/margin/fields/dbsplit"]
+margin_top = -1.0
+margin_right = 76.4
+margin_bottom = 24.4
+text = "Database:"
+
+[node name="dblist" type="OptionButton" parent="main/margin/fields/dbsplit"]
+margin_left = 82.0
+margin_right = 1004.0
+margin_bottom = 25.0
+
+[node name="outputsplit" type="HSplitContainer" parent="main/margin/fields"]
+margin_top = 28.0
+margin_right = 1004.0
+margin_bottom = 228.0
+dragger_visibility = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="main/margin/fields/outputsplit"]
+margin_right = 61.0
+margin_bottom = 200.0
+split_offset = 93
+dragger_visibility = 1
+
+[node name="label" type="Label" parent="main/margin/fields/outputsplit/VSplitContainer"]
+margin_top = 46.0
+margin_right = 61.4
+margin_bottom = 71.4
+text = "Output:"
+
+[node name="btnoutputclear" type="Button" parent="main/margin/fields/outputsplit/VSplitContainer"]
+margin_top = 124.0
+margin_right = 61.0
+margin_bottom = 200.0
+text = "Clear"
+
+[node name="output" type="RichTextLabel" parent="main/margin/fields/outputsplit"]
+margin_left = 67.0
+margin_right = 1004.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+focus_mode = 2
+custom_fonts/normal_font = ExtResource( 3 )
+selection_enabled = true
+
+[node name="btnupdatedb" type="Button" parent="main/margin/fields"]
+margin_top = 231.0
+margin_right = 1004.0
+margin_bottom = 254.0
+text = "Update Database List"
+
+[node name="btnpasswdadmin" type="Button" parent="main/margin/fields"]
+margin_top = 257.0
+margin_right = 1004.0
+margin_bottom = 280.0
+text = "Set passwords to admin"
+
+[node name="btndisablecron" type="Button" parent="main/margin/fields"]
+margin_top = 283.0
+margin_right = 1004.0
+margin_bottom = 306.0
+text = "Disable CRONs"
+
+[node name="HSeparator" type="HSeparator" parent="main/margin/fields"]
+margin_top = 309.0
+margin_right = 1004.0
+margin_bottom = 313.0
+
+[node name="extidhbox" type="HBoxContainer" parent="main/margin/fields"]
+margin_top = 316.0
+margin_right = 1004.0
+margin_bottom = 341.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnextid" type="Button" parent="main/margin/fields/extidhbox"]
+margin_right = 112.0
+margin_bottom = 25.0
+text = "Get External ID"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="main/margin/fields/extidhbox"]
+margin_left = 115.0
+margin_top = -1.0
+margin_right = 170.4
+margin_bottom = 24.4
+text = "Model:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="modelinput" type="LineEdit" parent="main/margin/fields/extidhbox"]
+margin_left = 173.0
+margin_right = 293.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 120, 0 )
+expand_to_text_length = true
+
+[node name="Label2" type="Label" parent="main/margin/fields/extidhbox"]
+margin_left = 296.0
+margin_top = -1.0
+margin_right = 376.4
+margin_bottom = 24.4
+text = "Internal ID"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="internalidinput" type="LineEdit" parent="main/margin/fields/extidhbox"]
+margin_left = 379.0
+margin_right = 431.0
+margin_bottom = 25.0
+expand_to_text_length = true
+
+[node name="fieldshbox" type="HBoxContainer" parent="main/margin/fields"]
+margin_top = 344.0
+margin_right = 1004.0
+margin_bottom = 369.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnfields" type="Button" parent="main/margin/fields/fieldshbox"]
+margin_right = 75.0
+margin_bottom = 25.0
+text = "Get Fields"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="main/margin/fields/fieldshbox"]
+margin_left = 78.0
+margin_top = -1.0
+margin_right = 133.4
+margin_bottom = 24.4
+text = "Model:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="modelinput" type="LineEdit" parent="main/margin/fields/fieldshbox"]
+margin_left = 136.0
+margin_right = 256.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 120, 0 )
+expand_to_text_length = true
+
+[node name="HSeparator3" type="HSeparator" parent="main/margin/fields"]
+margin_top = 372.0
+margin_right = 1004.0
+margin_bottom = 376.0
+
+[node name="btnbackupdb" type="Button" parent="main/margin/fields"]
+margin_top = 379.0
+margin_right = 1004.0
+margin_bottom = 402.0
+text = "Create _bak suffixed Database"
+
+[node name="btndropdb" type="Button" parent="main/margin/fields"]
+margin_top = 405.0
+margin_right = 1004.0
+margin_bottom = 428.0
+text = "Drop Database"
+
+[node name="HSeparator2" type="HSeparator" parent="main/margin/fields"]
+margin_top = 431.0
+margin_right = 1004.0
+margin_bottom = 435.0
+
+[node name="customquerysplit" type="HSplitContainer" parent="main/margin/fields"]
+margin_top = 438.0
+margin_right = 1004.0
+margin_bottom = 538.0
+dragger_visibility = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="main/margin/fields/customquerysplit"]
+margin_right = 110.0
+margin_bottom = 100.0
+split_offset = 27
+dragger_visibility = 1
+
+[node name="label" type="Label" parent="main/margin/fields/customquerysplit/VSplitContainer"]
+margin_top = 13.0
+margin_right = 110.4
+margin_bottom = 38.4
+text = "Custom query:"
+
+[node name="btncustomquery" type="Button" parent="main/margin/fields/customquerysplit/VSplitContainer"]
+margin_top = 58.0
+margin_right = 110.0
+margin_bottom = 100.0
+text = "Execute"
+
+[node name="TextEdit" type="TextEdit" parent="main/margin/fields/customquerysplit"]
+margin_left = 116.0
+margin_right = 1004.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+highlight_current_line = true
+show_line_numbers = true
+caret_blink = true
+
+[node name="dropdbconfirm" type="ConfirmationDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -35.0
+margin_right = 100.0
+margin_bottom = 35.0
+
+[connection signal="pressed" from="main/margin/fields/outputsplit/VSplitContainer/btnoutputclear" to="." method="_on_btnoutputclear_pressed"]
+[connection signal="pressed" from="main/margin/fields/btnupdatedb" to="." method="_on_btnupdatedb_pressed"]
+[connection signal="pressed" from="main/margin/fields/btnpasswdadmin" to="." method="_on_btnpasswdadmin_pressed"]
+[connection signal="pressed" from="main/margin/fields/btndisablecron" to="." method="_on_btndisablecron_pressed"]
+[connection signal="pressed" from="main/margin/fields/extidhbox/btnextid" to="." method="_on_btnextid_pressed"]
+[connection signal="pressed" from="main/margin/fields/fieldshbox/btnfields" to="." method="_on_btnfields_pressed"]
+[connection signal="pressed" from="main/margin/fields/btnbackupdb" to="." method="_on_btnbackupdb_pressed"]
+[connection signal="pressed" from="main/margin/fields/btndropdb" to="." method="_on_btndropdb_pressed"]
+[connection signal="pressed" from="main/margin/fields/customquerysplit/VSplitContainer/btncustomquery" to="." method="_on_btncustomquery_pressed"]
+[connection signal="confirmed" from="dropdbconfirm" to="." method="_on_dropdbconfirm_confirmed"]
