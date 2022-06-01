@@ -23,6 +23,7 @@ Dark theme
 * Godot produces large binaries, this simple app is around 40Mb exported. I used tkinter previously but it was ugly (shrug)
 * If Odoo is running, db drop/backup commands will likely hang
 * Debug output is not always that useful
+* Relies completely on bash commands `psql`, `createdb`, `dropdb` and likely will only work on mac/linux due to this
 
 ## Roadmap
 * Add db `_bak` restorer, which drops the non `_bak` suffixed database, then creates it again using the `_bak` suffixed database
